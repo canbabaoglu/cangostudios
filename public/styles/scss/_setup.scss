@@ -1,0 +1,42 @@
+/* --------------------------------------------------- */
+/* -------------------- VARIABLES -------------------- */
+/* --------------------------------------------------- */
+
+/* ----------------- Measurements -----------------*/
+
+$page-width               : 1080px;
+$small-border-radius      : 4px;
+$large-border-radius      : 8px;
+
+/* -------------------- Colors --------------------*/
+
+// Background colors
+$page-bg-color            : #EAE4EA; 
+$element-bg-color         : #E4DDE4;
+$success-bg-color         : #BECDB8;
+$progress-bg-color        : #E4D1B9;
+
+// Header colors 
+$header-bg-color          : #563D7C; // Also used in: 
+											//Section CTA hover states
+									        // Slider navigation icons
+$header-menu-bg-color     : #9036B3; 
+$active-nav-bg-color	  : #7F00B3; // Also used in: active and hover nav items	
+$section-border-color     : #FF9D11; 
+
+// Other colors
+$success-highlight-color  : #5cb85c; 
+$text-color               : #3B3B3B;
+
+/* --------------------------------------------------- */
+/* --------------------- MIXINS ---------------------- */
+/* --------------------------------------------------- */
+
+@mixin rounded($radius: $small-border-radius ) {
+	border-radius: $radius;
+}
+
+
+
+
+

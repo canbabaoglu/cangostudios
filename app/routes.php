@@ -13,5 +13,15 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+	return View::make('landing');
+});
+
+Route::get('/test', function()
+{
+	return View::make('test');
+});
+
+Route::get('/grid', function()
+{
+	return View::make('grid');
 });

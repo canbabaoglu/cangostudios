@@ -1,0 +1,100 @@
+.header {
+	background-color: $header-bg-color;
+	color: #ffffff;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+
+	.row {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+.logo-text {
+	padding: 10px 0;
+} 
+
+.menu-button-col {	
+
+	display: none;
+	padding-right: 0;
+
+	.menu-button {
+		float: right;
+		border: none;
+		border-radius: 4px;
+		background-color: $header-menu-bg-color;	
+		margin: 7px 0;
+		padding: 5px 7px;
+
+		i {
+			font-size: 1.5em;
+			margin-right: 6px;
+		} 
+
+		span {
+			position: relative;
+			top: -2px;
+		}
+
+		&:hover,
+		&.active {
+			background-color: $active-nav-bg-color;
+		}
+	}
+}
+
+.nav-col {
+	display: block;
+
+	ul,
+	li {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	ul {
+		float: right;
+	}
+
+	li {
+		float: left;
+		padding: 15px 25px;
+
+		&.active,
+		&:hover {
+			background-color: $active-nav-bg-color;
+		}
+	}
+}
+
+/* --------------------------------------------------- */
+/* ------------------ MEDIA QUERIES ------------------ */
+/* --------------------------------------------------- */
+
+@media only screen and (max-width: 780px) {
+
+	.nav-col { 
+		display: none;
+		padding: 0;
+
+		&.forced-width-9 {
+			width: 100%
+		}
+
+		ul,
+		li {
+			float: none;
+		}
+
+		ul {
+			padding: 15px 0;
+		}
+	}
+
+	.menu-button-col {
+		display: block;
+	}
+}

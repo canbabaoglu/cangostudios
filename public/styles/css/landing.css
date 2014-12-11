@@ -1,0 +1,103 @@
+/* --------------------------------------------------- */
+/* -------------------- VARIABLES -------------------- */
+/* --------------------------------------------------- */
+/* ----------------- Measurements -----------------*/
+/* -------------------- Colors --------------------*/
+/* --------------------------------------------------- */
+/* --------------------- MIXINS ---------------------- */
+/* --------------------------------------------------- */
+body {
+  background-color: #EAE4EA;
+  height: 100%;
+  min-height: 500px; }
+
+.page-wrapper {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-top: 48px; }
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0; }
+
+.section-row {
+  border-bottom: 3px solid #FF9D11;
+  color: #3B3B3B;
+  min-height: 250px; }
+  .section-row .section-header-row h1 {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 20px; }
+  .section-row .section-header-row h3 {
+    text-align: center; }
+
+.header {
+  background-color: #563D7C;
+  color: #ffffff;
+  position: fixed;
+  width: 100%;
+  z-index: 100; }
+  .header .row {
+    padding-top: 0;
+    padding-bottom: 0; }
+
+.logo-text {
+  padding: 10px 0; }
+
+.menu-button-col {
+  display: none;
+  padding-right: 0; }
+  .menu-button-col .menu-button {
+    float: right;
+    border: none;
+    border-radius: 4px;
+    background-color: #9036B3;
+    margin: 7px 0;
+    padding: 5px 7px; }
+    .menu-button-col .menu-button i {
+      font-size: 1.5em;
+      margin-right: 6px; }
+    .menu-button-col .menu-button span {
+      position: relative;
+      top: -2px; }
+    .menu-button-col .menu-button:hover, .menu-button-col .menu-button.active {
+      background-color: #7F00B3; }
+
+.nav-col {
+  display: block; }
+  .nav-col ul,
+  .nav-col li {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .nav-col ul {
+    float: right; }
+  .nav-col li {
+    float: left;
+    padding: 15px 25px; }
+    .nav-col li.active, .nav-col li:hover {
+      background-color: #7F00B3; }
+
+/* --------------------------------------------------- */
+/* ------------------ MEDIA QUERIES ------------------ */
+/* --------------------------------------------------- */
+@media only screen and (max-width: 780px) {
+  .nav-col {
+    display: none;
+    padding: 0; }
+    .nav-col.forced-width-9 {
+      width: 100%; }
+    .nav-col ul,
+    .nav-col li {
+      float: none; }
+    .nav-col ul {
+      padding: 15px 0; }
+
+  .menu-button-col {
+    display: block; } }
+
+/*# sourceMappingURL=landing.css.map */

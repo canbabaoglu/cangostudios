@@ -1,0 +1,23 @@
+@import "cangrid";
+
+.header {
+	display: none;
+}
+
+.grid-wrapper {
+	background-color: pink;
+}
+
+
+[class*='col-'] {
+	background-color: pink;
+	height: 50px;
+	h2 {
+		height: 100%;
+		width: 100%;
+		background-color: aqua; 
+		margin: 0;
+	}
+}
+
+	
