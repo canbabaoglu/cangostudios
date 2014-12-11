@@ -1,7 +1,7 @@
 /* --------------------------------------------------- */
 /* -------------------- VARIABLES -------------------- */
 /* --------------------------------------------------- */
-
+ 
 /* ----------------- Measurements -----------------*/
 
 $page-width               : 1080px;
@@ -14,6 +14,7 @@ $large-border-radius      : 8px;
 $page-bg-color            : #EAE4EA; 
 $element-bg-color         : #E4DDE4;
 $success-bg-color         : #BECDB8;
+$error-bg-color           : #ebccd1;
 $progress-bg-color        : #E4D1B9;
 
 // Header colors 
@@ -36,6 +37,21 @@ $text-color               : #3B3B3B;
 	border-radius: $radius;
 }
 
+%feedback-row {
+	display: none;
+	box-sizing: border-box;
+	background-color: blue;
+	text-align: center;
+	min-height: 300px;
+	padding: 15px;
+	font-size: 1.2em;
+	@include rounded($large-border-radius);
+
+	i {
+		font-size: 5em;
+		padding: 35px 0 25px 0;
+	} 
+}
 
 
 

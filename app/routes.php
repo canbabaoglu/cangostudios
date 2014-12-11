@@ -16,11 +16,10 @@ Route::get('/', function()
 	return View::make('landing');
 });
 
-Route::get('/test', function()
-{
-	return View::make('test');
-});
+Route::post('/', ['as' => 'prospects.store', 'uses' => 'ProspectController@store']);
 
+
+// Route to help visualize the grid 
 Route::get('/grid', function()
 {
 	return View::make('grid');

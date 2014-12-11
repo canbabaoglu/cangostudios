@@ -41,6 +41,8 @@ $('.nav-col li').click(function()
 
 });
 
+// TODO: Scrolling adjust nav-item
+
 
 /* --------------------- HELPER FUNCTIONS -------------------- */
 

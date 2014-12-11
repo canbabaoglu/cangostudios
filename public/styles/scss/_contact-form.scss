@@ -1,0 +1,38 @@
+@import "setup";
+
+.form-row {
+	input,
+	textarea {
+		box-sizing: border-box;
+		width: 100%;
+		margin-bottom: 20px;
+		height: 45px;
+		border-radius: 4px;
+		border-style: none; 
+		padding: 10px;
+		font-size: 1.1em;
+	} 
+
+	textarea {
+		height: 120px;
+	}
+
+	.send-button {
+		background-color: $success-highlight-color;
+		color: #ffffff;
+		font-weight: bold;
+		&:hover {
+			background-color: #46AA22;
+		}
+	}
+}
+
+.success-row {
+	@extend %feedback-row;
+	background-color: $success-bg-color;
+}
+
+.error-row {
+	@extend %feedback-row;
+	background-color: $error-bg-color;
+}

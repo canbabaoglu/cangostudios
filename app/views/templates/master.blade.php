@@ -34,6 +34,7 @@
 
     </div>
 
+    <script type="text/javascript" src="scripts/helpers.js"></script>
     @yield('additional_js_body')
 </body>
 </html>
