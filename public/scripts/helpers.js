@@ -27,37 +27,32 @@
 
 		function processJson(response) 
 		{
-			console.log(response);
-			/*
-			if (response.type == "success") 
+			
+			console.log(response.input);
+
+			if (response.type == 'success') 
 			{
-				hideShow('.form-row', 'success-row' );	
+				hideShow('.form-row', '.success-row', 1000 );	
 			} 
 			else if (response.type == "error") 
 			{
-				hideShow('.form-row', '.error-row');
-			}
-			*/	
+				hideShow('.form-row', '.error-row', 1000);
+			}	
 		}; 
 
 		
 		
 		function connectionError(response) 
 		{
-			console.log(response);
-			//hideShow('.form-row', '.error-row');
+			hideShow('.form-row', '.error-row', 1000);
 		};
 
 		
 
-		function hideShow(hideDiv, showDiv) 
+		function hideShow(hideDiv, showDiv, duration) 
 		{
-			$(hideDiv).fadeOut(1000);
-			
-			setTimeout( function()
-			{
-				$(showDiv).fadeIn(1000);
-			},1000);
+			$(hideDiv).slideUp(duration);
+			$(showDiv).slideDown(duration);	
 		}
 
 	})

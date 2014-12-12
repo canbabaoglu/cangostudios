@@ -26,16 +26,9 @@
 	</div>
 
 	<div class="row section-row contact-row">
-		<div class="row section-header-row">	
-			<h1>Contact us</h1>
-			<h3>and let's get your project rolling </h3>
-		</div>
+		
+		@include('partials.contact-form')
 
-		<div class="row section-content-row">
-			<div class="col-6 centered">
-				@include('partials.contact-form')
-			</div>
-		</div>	
 	</div>
 	
 @stop

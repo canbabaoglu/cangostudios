@@ -43,6 +43,23 @@ $('.nav-col li').click(function()
 
 // TODO: Scrolling adjust nav-item
 
+$(window).scroll(function() {
+	var startHeights = getSectionStartHeights();
+	windowHeight = $(window).scrollTop();
+
+	// when user scrolls deactivate all nav items
+	$('.nav-col li').removeClass('active');
+
+	// depending on the users location activate the right nav item
+	for (var i = startHeights.length -1; i >= 0; i-- ) {
+		if ( windowHeight >= startHeights[i] ) {
+			$('.nav-col li').eq(i).addClass('active');
+			break;
+		}
+	}
+
+});
+
 
 /* --------------------- HELPER FUNCTIONS -------------------- */
 

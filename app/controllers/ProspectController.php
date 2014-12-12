@@ -4,7 +4,14 @@ class ProspectController extends \BaseController {
 
 	public function store()
 	{
-		return 'Hello';
+		$prospect = Prospect::create(Input::all());
+		
+		$response = [
+			'type'       => 'success',
+			'input'      => Input::all()
+		];
+
+		return json_encode($response);
 		// validate input
 
 		// write to db
