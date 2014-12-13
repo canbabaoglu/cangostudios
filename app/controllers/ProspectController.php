@@ -1,24 +1,38 @@
 <?php
 
+use Cangostudios\Forms\ContactForm;
+
 class ProspectController extends \BaseController {
 
+	
 	public function store()
 	{
-		$prospect = Prospect::create(Input::all());
+		// Setup
+		$input = Input::all();
+		$rules = Prospect::getRules();
+		$response = ['type' => 'success'];
+
+		// Validate input
+		$validation = Validator::make($input, $rules);
+
+		// 
+		if ($validation->fails()) 
+		{
+			$response = [
+				'type'    => 'error',
+				'errors'  => $validation->messages()->toArray()
+			];
+			return Response::json($response);
+		}
 		
-		$response = [
-			'type'       => 'success',
-			'input'      => Input::all()
-		];
-
-		return json_encode($response);
-		// validate input
-
-		// write to db
-
+		//Write to db
+		$prospect = Prospect::create($input);
+		
 		// email to Can
 
 		// email to prospect
+		
+		return Response::json($response);	
 
 	}
 

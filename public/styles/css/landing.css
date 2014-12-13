@@ -52,8 +52,7 @@ p {
     text-align: center;
     font-size: 2.5em; }
   .section-row .section-header-row h3 {
-    text-align: center;
-    padding-bottom: 30px; }
+    text-align: center; }
 
 .header {
   background-color: #563D7C;
@@ -149,16 +148,38 @@ p {
 
 .form-row input,
 .form-row textarea {
+  border-radius: 4px;
   box-sizing: border-box;
   width: 100%;
-  margin-bottom: 20px;
   height: 45px;
-  border-radius: 4px;
   border-style: none;
   padding: 10px;
   font-size: 1.1em; }
 .form-row textarea {
   height: 120px; }
+.form-row .error-alert-row {
+  display: none;
+  border-radius: 4px;
+  color: #A94442;
+  text-align: center;
+  border: 1px solid #A94442;
+  background-color: #ebccd1;
+  padding: 10px; }
+.form-row .error-detected {
+  color: #A94442;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid #A94442;
+  border-bottom: none; }
+.form-row .error-container {
+  display: none;
+  position: relative;
+  top: 0;
+  border-radius: 0 0 4px 4px;
+  border: 1px solid #A94442;
+  background-color: #ebccd1;
+  font-style: italic;
+  color: #A94442;
+  padding: 10px; }
 .form-row .send-button {
   background-color: #5cb85c;
   color: #ffffff;

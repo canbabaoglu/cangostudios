@@ -7,13 +7,43 @@
 
 	<div class="row section-content-row">
 		<div class="col-6 centered">
-			{{ Form::open(['route'=>'prospects.store', 'data-ajax'=>'']) }}
+			{{ Form::open(['route'=>'prospects.store', 'novalidate'=>'', 'data-ajax'=>'', 'data-success'=>'contactFormSuccess', 'data-error'=>'contactFormError']) }}
+
+				<div class="row error-alert-row">
+					<h3>There were some errors with your message.</h3>
+				</div>
+
+				<div class='row'>
+					{{ Form::text('name', null, ['placeholder'=>'Your full name', 'required'=>'']) }} 
+					<div class="error-container">
+						<p class='error-message'>Error message goes here.</p>	
+					</div>
+				</div>
+
+				<div class='row'>
+					{{ Form::email('email', null, ['placeholder'=>'Your email', 'required'=>'']) }} 
+					<div class="error-container">
+						<p class='error-message'>Error message goes here.</p>	
+					</div>
+				</div>
 				
-				{{ Form::text('name', null, ['placeholder'=>'Your full name', 'required'=>'' ]) }}
-				{{ Form::email('email', null, ['placeholder'=>'Your email', 'required'=>'']) }}
-				{{ Form::input('tel', 'phoneNo', null, ['placeholder'=>'Your phone number', 'required' => '']) }}
-				{{ Form::textarea('message', null, ['placeholder'=>'Your message', 'required'=>'']) }}
-				{{ Form::submit('Send your message', ['class'=>'send-button'])}}
+				<div class='row'>
+					{{ Form::input('tel', 'phoneNo', null, ['placeholder'=>'Your phone number', 'required' => '']) }}
+					<div class="error-container">
+						<p class='error-message'>Error message goes here.</p>	
+					</div>
+				</div>
+				
+				<div class='row'>
+					{{ Form::textarea('message', null, ['placeholder'=>'Your message', 'required'=>'']) }}
+					<div class="error-container">
+						<p class='error-message'>Error message goes here.</p>	
+					</div>
+				</div>
+				
+				<div class='row'>
+					{{ Form::submit('Send your message', ['class'=>'send-button'])}}
+				</div>
 
 			{{ Form::close() }}
 		</div>

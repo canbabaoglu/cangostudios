@@ -71,7 +71,7 @@ function getcurrentNavIndex()
 function getSectionStartHeights() 
 {
 
-	var howStartHeight = $('.home-row').height() + $('.logo-col').height();
+	var howStartHeight = $('.home-row').height() + 50;
 	var workStartHeight = howStartHeight + $('.how-row').height();
 	var packagesStartHeight = workStartHeight + $('.work-row').height();
 	var contactStartHeight = packagesStartHeight + $('.packages-row').height();
