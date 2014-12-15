@@ -29,8 +29,18 @@ class ProspectController extends \BaseController {
 		$prospect = Prospect::create($input);
 		
 		// email to Can
+		Mail::send('emails.prospects.adminnotify', $input, function($message)
+		{
+			$message->to('babaoglu.can@gmail.com')->subject('CangoStudios Prospect');
+		});
 
 		// email to prospect
+		
+		Mail::send('emails.prospects.confirm', $input, function($message) use ($input)
+		{
+			$message->to($input['email'])->subject('Thank you for contacting CangoStudios!');
+		});
+		
 		
 		return Response::json($response);	
 

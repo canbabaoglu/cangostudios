@@ -24,3 +24,8 @@ Route::get('/grid', function()
 {
 	return View::make('grid');
 });
+
+Route::get('/emails/prospects/adminnotify', function()
+{
+	return View::make('emails.prospects.adminnotify');
+});

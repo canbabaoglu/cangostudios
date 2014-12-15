@@ -35,7 +35,7 @@
 				</div>
 				
 				<div class='row'>
-					{{ Form::textarea('message', null, ['placeholder'=>'Your message', 'required'=>'']) }}
+					{{ Form::textarea('message_body', null, ['placeholder'=>'Your message', 'required'=>'']) }}
 					<div class="error-container">
 						<p class='error-message'>Error message goes here.</p>	
 					</div>

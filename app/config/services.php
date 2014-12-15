@@ -19,9 +19,9 @@ return array(
 		'secret' => '',
 	),
 
-	'mandrill' => array(
-		'secret' => '',
-	),
+	'mandrill' => [
+		'secret' => getenv('MANDRILL_API_KEY')
+	],
 
 	'stripe' => array(
 		'model'  => 'User',

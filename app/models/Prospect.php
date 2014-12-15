@@ -8,14 +8,14 @@ class Prospect extends Eloquent {
 		'name',
 		'email',
 		'phoneNo',
-		'message'
+		'message_body'
 	];
 
 	protected static $rules = [
-		'name'     =>  'required',
-		'email'    =>  ['required', 'email'],
-		'phoneNo'  =>  'required',
-		'message'  =>  'required'
+		'name'          =>  'required',
+		'email'         =>  ['required', 'email'],
+		'phoneNo'       =>  'required',
+		'message_body'  =>  'required'
 	];
 
 	public static function getRules() 

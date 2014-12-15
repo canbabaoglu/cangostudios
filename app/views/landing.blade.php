@@ -5,7 +5,7 @@
 @stop
 
 @section('additional_css')
-	<link rel="stylesheet" type="text/css" href="{{ asset('styles/css/landing.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('styles/css/site/landing.css') }}">
 @stop
 
 @section('page_body')

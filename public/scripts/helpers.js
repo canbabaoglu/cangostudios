@@ -55,7 +55,7 @@
 
 				// Message errors 
 				if ( response.errors.message ) {
-					addError($('textarea[name="message"]'), deparam(data).message, response.errors.message); 
+					addError($('textarea[name="message_body"]'), deparam(data).message, response.errors.message); 
 				}
 			}
 		} 
